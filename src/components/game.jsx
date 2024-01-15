@@ -16,14 +16,13 @@ function Game() {
     setCurrentMove(nextHistory.length - 1);
   }
 
-  // tracking
   function jumpTo(move) {
     setCurrentMove(move);
     setXisNext(move % 2 === 0);
   }
 
   return (
-    <div className="h-full flex items-center justify-center w-[700px]">
+    <div className="h-full flex items-center justify-center w-[750px]">
       <div className="flex gap-5 w-full justify-center items-start">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
         <Tracking history={history} onJump={jumpTo} />
